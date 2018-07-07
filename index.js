@@ -16,6 +16,10 @@ app.get('/data', function(request, response) {
    return response.send(data)
 })
 
+app.get('*', function(request, response) {
+    return response.send('Нет такого адреса!')
+ })
+
 app.listen(port, function(err) {
     if (err) {
         return console.log('something bad happened', err)
