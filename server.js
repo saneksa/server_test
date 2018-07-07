@@ -5,13 +5,13 @@ const data = require('./document.json')
 var cors = require('cors')
 
 app.use(cors())
-app.get('/data', (request, response) => {
-    response.send(data)
+app.get('/data', function(request, response) {
+   return response.send(data)
 })
 
-app.listen(port, (err) => {
+app.listen(port, function(err) {
     if (err) {
         return console.log('something bad happened', err)
     }
-    console.log(`server is listening on ${port}`)
+    return console.log(`server is listening on ${port}`)
 })
