@@ -9,7 +9,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-///app.use(cors())
+app.use(cors())
 
 app.get('/', function(request, response) {
     return response.send('Привет!')
