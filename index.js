@@ -4,7 +4,7 @@ var port = process.env.PORT || 4000
 var data = require('./document.json')
 
 app.use(function (req, res, next) {
-    res.header('Content-Type', 'application/json');
+    res.header('Access-Control-Allow-Origin: *', 'Content-Type', 'application/json');
     next();
 });
 
