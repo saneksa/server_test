@@ -6,7 +6,8 @@
       "start": "node index.js"
     },
     "dependencies": {
-        "express": "^4.16.3"
+        "express": "^4.16.3",
+        "cors": "^2.8.4"
     },    
   "main": "index.js",
   "engines": {

@@ -1,12 +1,15 @@
 var express = require('express')
 var app = express()
 var port = process.env.PORT || 4000
+var cors = require('cors')
 var data = require('./document.json')
 
 app.use(function (req, res, next) {
-    res.header('Access-Control-Allow-Origin: *', 'Content-Type', 'application/json');
+    res.header('Content-Type', 'application/json');
     next();
 });
+
+app.use(cors())
 
 app.get('/', function(request, response) {
     return response.send('Привет!')
