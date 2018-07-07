@@ -4,7 +4,7 @@ var port = 4000
 var data = require('./document.json')
 
 app.get('/data', function(request, response) {
-   return response.send(data)
+   return response.json({dsf: 'dffdfd'})
 })
 
 app.listen(port, function(err) {
