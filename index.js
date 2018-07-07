@@ -9,7 +9,11 @@ app.use(function (req, res, next) {
 });
 
 app.get('/', function(request, response) {
-   return response.json({dsf: 'dffdfd'})
+    return response.send('Привет!')
+ })
+
+app.get('/data', function(request, response) {
+   return response.send(data)
 })
 
 app.listen(port, function(err) {
